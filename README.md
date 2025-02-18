@@ -34,7 +34,7 @@ data
 ~~~
 
 ## Pretrained Model
-Download pretrained [GPT2](https://huggingface.co/openai-community/gpt2/) from Huggingface into the `./model` directory. [Stable Diffusion v1.5]([(https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5)]), [Llama-3-8B](https://huggingface.co/meta-llama/Meta-Llama-3-8B) and [CLIP VIT-B/32](https://github.com/openai/CLIP) can be downloaded automatically within code. The directory looks like:
+Download pretrained [GPT2](https://huggingface.co/openai-community/gpt2/) from Huggingface into the `./model` directory. [Stable Diffusion v1.5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5), [Llama-3-8B](https://huggingface.co/meta-llama/Meta-Llama-3-8B) and [CLIP VIT-B/32](https://github.com/openai/CLIP) can be downloaded automatically within code. The directory looks like:
 
   ```bash
   model
