@@ -1,6 +1,6 @@
 # SaCap
 
-A PyTorch implementation of "Synthesize-then-Align: Modality Alignment Augmentation for Image Captioning with Synthetic Data".
+A PyTorch implementation of "Synthesize Then Align: Modality Alignment Augmentation for Zero-shot Image Captioning with Synthetic Data".
 ## Requirements
 
 Install the requirements with:
