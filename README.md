@@ -27,8 +27,8 @@ data
 ├── cc3m
 │   └── train_captions.json		#captions of training split
 ├── nocaps
-│   ├── refs.json               #reference of test split
-│   └── test                    #images of test split
+│   ├── refs.json                       #reference of test split
+│   └── test                            #images of test split
 │       └── test_image
 └── object_phrases.json			#object phrases used to construct hard prompt
 ~~~
@@ -56,13 +56,13 @@ We perform data preparation before proceeding with training, and realize this pr
   data
   ├── mscoco
   │   ├── train
-  │   │   ├── text_feature_dict.pt		  		#clip text feature of captions
+  │   │   ├── text_feature_dict.pt		  	#clip text feature of captions
   │   │   ├── synthetic_image_pk_dict.json		#synthetic pseudo pair's map
   │   │   └── ...
   │   └── test
-  │       ├── test_image_global_feature_dict.pt	#clip image feature of test images
+  │       ├── test_image_global_feature_dict.pt	        #clip image feature of test images
   │       └── ...
-  ├── object_phrases_feature_dict.pt		  		#clip text feature of object phrases
+  ├── object_phrases_feature_dict.pt		  	#clip text feature of object phrases
   ~~~
 
 * **Image synthesis**
@@ -77,7 +77,7 @@ We perform data preparation before proceeding with training, and realize this pr
   data
   ├── mscoco
   │   ├── train
-  │   │   ├── synthetic_images						#synthetic image of captions
+  │   │   ├── synthetic_images			        #synthetic image of captions
   │   │   ├── synthetic_image_global_feature_dict.pt	#image global feature of synthetic images
   │   │   └── ...
   ~~~
@@ -108,7 +108,7 @@ We perform data preparation before proceeding with training, and realize this pr
   data
   ├── mscoco
   │   ├── train
-  │   │   ├── supporting_images			        	#supporting image of text from rephrasing
+  │   │   ├── supporting_images			        #supporting image of text from rephrasing
   │   │   ├── supporting_image_global_feature_dict.pt	#image global feature of supporting images
   │   │   ├── supporting_image_pk_dict.json          	#supporting image name and conditional text map
   │   │   └── ...
@@ -126,11 +126,11 @@ We perform data preparation before proceeding with training, and realize this pr
   data
   ├── mscoco
   │   ├── train
-  │   │   ├── synthetic_image_hard_prompt_dict.json    #shard Prompt of supporting images
-  │   │   ├── supporting_image_hard_prompt_dict.json	 #hard Prompt of synthetic images
+  │   │   ├── synthetic_image_hard_prompt_dict.json     #shard Prompt of supporting images
+  │   │   ├── supporting_image_hard_prompt_dict.json    #hard Prompt of synthetic images
   │   │   └── ...
   │   ├── test
-  │   │   ├── test_image_hard_prompt_dict.json	     #hard Prompt of test images
+  │   │   ├── test_image_hard_prompt_dict.json	      #hard Prompt of test images
   │   │   └── ...
   ~~~
 
