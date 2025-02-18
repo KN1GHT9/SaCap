@@ -1,0 +1,6 @@
+torch==2.0.1
+diffusers==0.16.1
+tokenizers==0.11.1
+tqdm
+pycocoevalcap
+git+https://github.com/openai/CLIP.git
