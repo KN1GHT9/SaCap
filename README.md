@@ -24,8 +24,6 @@ data
 │       └── test_image			#images of test split
 ├── ss1m
 │   └── train_captions.json		#captions of training split
-├── cc3m
-│   └── train_captions.json		#captions of training split
 ├── nocaps
 │   ├── refs.json                       #reference of test split
 │   └── test                            #images of test split
@@ -48,7 +46,7 @@ We perform data preparation before proceeding with training, and realize this pr
 * **Extract CLIP features for training and test**
 
   ```bash
-  python data_prepare.py --dataset {mscoco|flickr30k|ss1m|cc3m}
+  python data_prepare.py --dataset {mscoco|flickr30k|ss1m}
   ```
   The following file is obtained after executing the above command, using MSCOCO as an example.
 
@@ -69,7 +67,7 @@ We perform data preparation before proceeding with training, and realize this pr
   This section generates synthetic images for all conditional texts from the given corpus.
 
   ```bash
-  python image_synthesis.py --dataset {mscoco|flickr30k|ss1m|cc3m}
+  python image_synthesis.py --dataset {mscoco|flickr30k|ss1m}
   ```
   The following directory or file is obtained after executing the above command, using MSCOCO as an example.
 
@@ -84,7 +82,7 @@ We perform data preparation before proceeding with training, and realize this pr
 
 * **Rephrasing caption**
   ```bash
-  python caption_rephrasing.py --dataset {mscoco|flickr30k|ss1m|cc3m}
+  python caption_rephrasing.py --dataset {mscoco|flickr30k|ss1m}
   ```
   The following file is obtained after executing the above command, using MSCOCO as an example.
 
@@ -100,7 +98,7 @@ We perform data preparation before proceeding with training, and realize this pr
   This section generates supporting images for texts from rephrasing.
 
   ```bash
-  python supporting_image_synthesis.py --dataset {mscoco|flickr30k|ss1m|cc3m}
+  python supporting_image_synthesis.py --dataset {mscoco|flickr30k|ss1m}
   ```
   The following directory or file is obtained after executing the above command, using MSCOCO as an example.
 
@@ -118,7 +116,7 @@ We perform data preparation before proceeding with training, and realize this pr
   This section retrieves the **Top-N** support features with the highest similarity to the target feature based on the cosine similarity of the CLIP features. It is used to retrieve relevant object phrases.
 
   ```bash
-  python hard_prompt_retrieval.py --dataset {mscoco|flickr30k|ss1m|cc3m}
+  python hard_prompt_retrieval.py --dataset {mscoco|flickr30k|ss1m}
   ```
   The following directory or file is obtained after executing the above command, using MSCOCO as an example.
   
@@ -140,7 +138,7 @@ We use a re-pairing mechanism to construct training pairs for each iteration and
 Running the following code will create a folder `./trained_model/{dataset}` in the root directory, and save the training log, argument, and model weights.
 
   ```bash
-  python training.py --dataset {mscoco|flickr30k|ss1m|cc3m}
+  python training.py --dataset {mscoco|flickr30k|ss1m}
   ```
   The following folder or file is obtained after executing the above command, using MSCOCO as an example.
 
