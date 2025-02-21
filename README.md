@@ -155,7 +155,7 @@ Executing the following command performs `in-domain zero-shot` or `cross-domain 
   ```bash
   python inference.py 
   --model_path {trained model}               #trained model 
-  --test_dataset {mscoco|flickr30k|nocaps}   #target domain 
+  --test_dataset {mscoco|flickr30k|nocaps}   #target domain
   ```
   The inference results file will be obtained in the same directory as the model weights file, using MSCOCO as an example.
   ```bash
