@@ -151,7 +151,7 @@ trained_model
 ~~~
 
 ## Inference
-Executing the following command performs `in-domain` or `crossdomian zero-shot` experiments by setting `--test_dataset`.
+Executing the following command performs `in-domain zero-shot` or `cross-domian zero-shot` experiments by setting `--test_dataset`.
   ```bash
   python inference.py 
   --model_path {trained model}               #trained model 
